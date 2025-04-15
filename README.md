@@ -21,13 +21,14 @@ Steps taken:
 
 - Replace the empty values for the following features with mode values: 
 **fuel**, **title_status**, **transmission**, **drive**, **paint_color**, **condition**, **type**_
-- Replace the empty values for the following features with meduan values.
-**odometer**, **year**
+- Replace the empty values for the following features with median values: **odometer**, **year**
 - Dropped the following features:
 **region**, **cylinders**, **size**, **id**, **VIN**
 - Encoded the follow features using the James-Stein Encoder:
 **fuel**, **paint_color**, **type**, **condition**, **state**, **model**, **manufacturer**
-- Removed listings with prices under $500 or over $50,000
+- The following features also had one-hot encoding applied using get_dummies: 
+**title_status**, **transmission**, **drive**
+- Removed listings with prices **under $500** or **over $50,000**
 - Eliminated extreme odometer values (under **500** or over **180,000** miles)
 - Removed vehicles manufactured before **1980** (to exclude classic/collector cars)
 - Dropped entries with missing or inconsistent values
@@ -68,6 +69,10 @@ After removing outliers, year, model, and mileage-based features became more imp
 
 ## 4. Evaluation - Modeling Findings & Interpretation
 
+![Alt text](./practical_application_II_starter/images/actual_vs_predicted.png "a title")
+
+
+![Alt text](./practical_application_II_starter/images/price_vs_year.png "a title")
 ### Key Findings:
 
 | Metric                | Value      |
