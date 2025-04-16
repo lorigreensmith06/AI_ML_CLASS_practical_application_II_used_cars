@@ -91,7 +91,8 @@ This means the model can estimate prices with an average error of ~$5,100 — a si
 
 
 
-![Alt text](./practical_application_II_starter/images/model_rmse_improvement.png "a title")
+
+![Alt text](./practical_application_II_starter/images/model_rmse_improvement_2.png "a title")
 
 ## 5. Deployment - Actionable Business Recommendations
 
