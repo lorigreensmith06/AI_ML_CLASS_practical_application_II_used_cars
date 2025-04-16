@@ -44,15 +44,19 @@ Steps taken:
 ## 3. Modeling - Descriptive and Inferential Statistics
 Several type of models were implemented.  
 
-- Regression, Polynomial degree 2
-- Ridge, Polynomial degree 2
-- Lasso, Polynomial degree 2
+| Model Type | Description                             | Train RMSE | Test RMSE |
+|------------|-----------------------------------------|------------|-----------|
+| Regression | Polynomial degree 2                     | $5138.41   | $5190.89  |
+| Ridge      | Ridge regression with polynomial degree 2 | $5138.51   | $5191.29  |
+| Lasso      | Lasso regression with polynomial degree 2 | $5138.91   | $5191.03  |
+
 
 Key Points About Models: 
-- Interestingly, all of the models performed similarly with the data.
-- Making Polynomial degree 2 improved the models.
-- Adding features tended to help the models.
-- Taking features away tended to hurt the models (except region which I decided to drop).
+- All three models performed similarly on the dataset.
+- Using a polynomial degree of 2 improved overall performance.
+- Adding features generally improved accuracy.
+- Removing features typically hurt performance — except for region, which consistently worsened model performance and was therefore dropped.
+
 
 | Metric                | Value      |
 |-----------------------|------------|
@@ -71,6 +75,7 @@ After removing outliers, year, model, and mileage-based features became more imp
 
 ![Alt text](./practical_application_II_starter/images/actual_vs_predicted.png "a title")
 
+The scatter plots were helpful for identifying outliers and making informed decisions about which data would likely help or hurt the models. The above and below images are scatter plots of the cleaned data, showing the model's predictions on both the training and test sets.
 
 ![Alt text](./practical_application_II_starter/images/price_vs_year.png "a title")
 ### Key Findings:
@@ -87,6 +92,7 @@ This means the model can estimate prices with an average error of ~$5,100 — a si
 
 
 ![Alt text](./practical_application_II_starter/images/model_rmse_improvement.png "a title")
+
 ## 5. Deployment - Actionable Business Recommendations
 
 | Top Features That Drive Price| Value |
